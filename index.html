@@ -1,0 +1,946 @@
+vcv<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rugby-template</title>
+<style>
+html,body{
+	position:absolute;
+	min-width:100%
+}
+*{
+	padding:0;
+	margin:0;
+}
+
+@font-face {
+  font-family: 'MontserratAlternates-Bold';
+  src:url('fonts/MontserratAlternates-Bold.woff') format('woff'),
+        url('fonts/MontserratAlternates-Bold.woff2') format('woff2'),
+        url('fonts/MontserratAlternates-Bold.svg#MontserratAlternates-Bold') format('svg'),
+        url('fonts/MontserratAlternates-Bold.eot'),
+        url('fonts/MontserratAlternates-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/MontserratAlternates-Bold.ttf') format('truetype');
+
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+    font-family: 'alfa_slab_oneregular';
+    src: url('fonts/alfaslabone-regular-webfont.woff2') format('woff2'),
+         url('fonts/alfaslabone-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+  font-family: 'Montserrat-Black';
+  src:url('fonts/Montserrat-Black.woff') format('woff'),
+        url('fonts/Montserrat-Black.woff2') format('woff2'),
+        url('fonts/Montserrat-Black.svg#Montserrat-Black') format('svg'),
+        url('fonts/Montserrat-Black.eot'),
+        url('fonts/Montserrat-Black.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Montserrat-Black.ttf') format('truetype');
+
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'MontserratAlternates-Bold';
+  src:url('fonts/MontserratAlternates-Bold.woff') format('woff'),
+        url('fonts/MontserratAlternates-Bold.woff2') format('woff2'),
+        url('fonts/MontserratAlternates-Bold.svg#MontserratAlternates-Bold') format('svg'),
+        url('fonts/MontserratAlternates-Bold.eot'),
+        url('fonts/MontserratAlternates-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/MontserratAlternates-Bold.ttf') format('truetype');
+
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+.main{
+	width:100%;
+	height:auto;
+	background-color:#000;
+}
+.index{
+	width:1776px;
+	height:auto;
+	margin:auto;
+}
+.header{
+	width:100%;
+	height:902px;
+	margin:auto;
+	background:url(images/header-img.png) no-repeat top 30% center, url(images/header-arrow.png) no-repeat top 20% center, url(images/.png) no-repeat center ,#000;
+	background-size:100%;
+	padding:58px 0 0 0;
+}
+.nav{
+	width:100%;
+	height:67px;
+	background-color:#11f2ff;
+}
+.nav img{
+	margin:28px 500px 0 123px;
+	float:left;
+}
+.nav-bar{
+	width:auto;
+	height:auto;
+	float:left;
+	margin:20px 0 0 0;
+}
+.nav-bar ul li{
+	list-style-type:none;
+	display:inline;
+    font-family: 'MontserratAlternates-Bold';
+	font-size:18px;
+	margin:0 120px 0 0;
+}
+.nav-bar ul li a:link, .nav-bar ul li a:visited{
+	list-style-type:none;
+	display:inline;
+    font-family: 'MontserratAlternates-Bold';
+	font-size:18px;
+	text-transform:uppercase;
+	color:#000;
+	text-decoration:none;
+}
+.nav-bar ul li a:hover{
+	list-style-type:none;
+	display:inline;
+	font-family: 'MontserratAlternates-Bold';
+	font-size:18px;
+	text-decoration:none;
+	color:red;
+}
+.header h1{
+	color:#fff;
+    font-family: 'Montserrat-Black';
+	text-align:center;
+	font-size:70px;
+	padding:130px 0 0 0;
+	text-transform:uppercase;
+}
+.header h1 span a:link, .header h1 span a:visited{
+	width:auto;
+	height:auto;
+	color:#fff;
+	padding:0 10px 0 10px;
+	background-color:red;
+	width:180px;
+	font-size:70px;
+	text-decoration:none;
+}
+.header h1 span a:hover{
+	width:auto;
+	height:auto;
+	padding:0 10px 0 10px;
+	background-color:#f77176;
+	font-size:70px;
+	text-decoration:none;
+	transition:0.5s;
+}
+.header button{
+	font-size:20px;
+	background-color:#fff;
+	color:#000;
+	margin:73px 0 0 840px;
+}
+.header button a:link, .header button a:visited{
+	font-size:20px;
+	padding:5px 15px;
+	background-color:#fff;
+	color:#000;
+	text-decoration:none;
+}
+.header button a:hover{
+	font-size:20px;
+	background-color:#11f2ff;
+	color:#fff;
+	padding:5px 15px;
+	text-decoration:none;
+	transition:0.5s;
+}
+.dots{
+	margin:80px 0 0 855px;
+}
+.saturday{
+	width:100%;
+	height:266px;
+	background:url(images/saturday-shape1.png) no-repeat center left, url(images/saturday-shape1.png) no-repeat center right;
+	background-color:#11f2ff;
+}
+.saturday h2{
+	font-size:40px;
+    font-family: 'alfa_slab_oneregular';
+	font-weight:normal;
+	padding:60px 0 0 0;
+	color:#fff;
+	text-align:center;
+	text-transform:uppercase;
+}
+.saturday h3{
+	font-size:40px;
+    font-family: 'alfa_slab_oneregular';
+	font-weight:normal;
+	padding:30px 0 0 0;
+	color:#000;
+	text-align:center;
+	text-transform:uppercase;
+}
+.saturday h3 span{
+	font-size:80px;
+	color:#000;
+	padding:0 40px;
+	text-align:center;
+	text-transform:uppercase;
+}
+.group3{
+	width:100%;
+	height:auto;
+	background:url(images/texture.png) no-repeat center top;
+	background-size:100%;
+}
+.group3_1{
+	width:100%;
+	height:955px;
+ 	background:url(images/shape.png) no-repeat top 129px left, url(images/shape.png) no-repeat top 720px right, url(images/arrow1.png) no-repeat top 20% left 90%, url(images/arrow2.png) no-repeat top 82% right 45%;
+	background-color:rgba(0, 0, 0, 0.95);
+}
+.group3_1 img{
+	margin:150px 0 0 0;
+	float:left;
+}
+.right-content{
+	width:480px;
+	height:auto;
+	float:left;
+	margin:310px 0 0 450px;
+}
+.right-content h2{
+	font-size:55px;
+	font-weight:normal;
+	text-transform:uppercase;
+	font-family: 'alfa_slab_oneregular';
+	color:#15f1ff;
+}
+.right-content p{
+	font-size:20px;
+	font-weight:normal;
+ 	font-family: 'MontserratAlternates-Bold';
+	line-height:25px;
+	padding:34px 0 50px 0;
+	color:#fff;
+}
+.right-content a:link, .right-content a:visited{
+	font-size:20px;
+ 	font-family: 'MontserratAlternates-Bold';
+	color:#000;
+	background-color:#15f1ff;
+	text-transform:uppercase;
+	padding:5px 15px;
+	text-decoration:none;
+}
+.right-content a:hover{
+	font-size:20px;
+ 	font-family: 'MontserratAlternates-Bold';
+	color:#000;
+	background-color:#0bcdd9;
+	text-transform:uppercase;
+	padding:5px 15px;
+	text-decoration:none;
+	transition:0.5s;
+}
+.group4{
+	width:100%;
+	height:auto;	
+	background:url(images/texture.png) no-repeat center top;
+	background-size:100%;
+}
+.group4_1{
+	width:100%;
+	height:857px;
+	background:url(images/arrow3.png) no-repeat left 160px top 109px, url(images/arrow2.png) no-repeat left 500px top 737px, url(images/shape.png) no-repeat top 174px left 1000px;
+ 	background-color:rgba(0, 0, 0, 0.95);
+}
+.left-content{
+	width:480px;
+	height:auto;
+	float:left;
+	margin:248px 0 0 160px;
+}
+.left-content h2{
+	font-size:55px;
+	font-weight:normal;
+	text-transform:uppercase;
+	font-family: 'alfa_slab_oneregular';
+	color:#15f1ff;
+}
+.left-content p{
+	font-size:20px;
+	font-weight:normal;
+ 	font-family: 'MontserratAlternates-Bold';
+	line-height:25px;
+	padding:34px 0 50px 0;
+	color:#fff;
+}
+.left-content a:link, .left-content a:visited{
+	font-size:20px;
+ 	font-family: 'MontserratAlternates-Bold';
+	color:#000;
+	background-color:#15f1ff;
+	text-transform:uppercase;
+	padding:5px 15px;
+	text-decoration:none;
+}
+.left-content a:hover{
+	font-size:20px;
+ 	font-family: 'MontserratAlternates-Bold';
+	color:#000;
+	background-color:#0bcdd9;
+	text-transform:uppercase;
+	padding:5px 15px;
+	text-decoration:none;
+	transition:0.5s;
+}
+.right-rectangle{
+	width:719px;
+	height:554px;
+	background-color:#15f1ff;
+	float:left;
+	margin:132px 0 0 417px;
+}
+.image{
+	position:relative;
+	right:148px;
+	bottom:221px;
+}
+.group5{
+	width:100%;
+	height:auto;	
+	background:url(images/texture.png) no-repeat center top;
+	background-size:100%;
+}
+.group5_1{
+	width:100%;
+	height:965px;
+	background:url(images/v-arrow1.png) no-repeat top 123px left 70px, url(images/v-arrow2.png) no-repeat top 123px right 70px, url(images/shape.png) no-repeat top 437px left 161px,  url(images/shape.png) no-repeat top 676px right 161px;
+ 	background-color:rgba(0, 0, 0, 0.95);
+}
+.group5_1 h2{
+	font-size:55px;
+	font-weight:normal;
+	text-transform:uppercase;
+	font-family: 'alfa_slab_oneregular';
+	color:#15f1ff;
+	text-align:center;
+	padding:98px 0 20px 0;
+}
+.group5_1 p{
+	font-size:20px;
+	font-weight:normal;
+ 	font-family: 'MontserratAlternates-Bold';
+	line-height:30px;
+	color:#fff;
+	text-align:center;
+}
+.rectangle{
+	width:100%;
+	height:auto;
+	background-color:;
+	display:flex;
+	justify-content: space-around;
+	margin:147px 0 0 0;
+}
+.rectangle1{
+	width:450px;
+	height:426px;
+	background-color:#15f1ff;
+}
+.rectangle2{
+	width:450px;
+	height:426px;
+	background-color:#15f1ff;
+}
+.rectangle img{
+	position:relative;
+	right:66px;
+	bottom:219px;
+}
+.rectangle span img{
+	position:relative;
+	right:40px;
+	bottom:219px;
+}
+.group6{
+	width:100%;
+	height:auto;	
+	background:url(images/texture.png) no-repeat center top;
+	background-size:100%;
+}
+.group6_1{
+	width:100%;
+	height:838px;
+	background:url(images/shape2.png) no-repeat top 260px center;
+ 	background-color:rgba(0, 0, 0, 0.95);
+}
+.group6_1 h2{
+	font-size:55px;
+	font-weight:normal;
+	text-transform:uppercase;
+	font-family: 'alfa_slab_oneregular';
+	color:#fff;
+	line-height:70px;
+	padding:150px 0 54px 1110px;
+}
+.content-rectangle{
+	width:100%;
+	height:490px;
+	background:url(images/arrow4.png) no-repeat top 378px right 170px;
+	background-color:#15f0fe;
+}
+.content-rectangle img{
+	position:relative;
+	right:10px;
+	bottom:412px;
+}
+.content-rectangle p{
+	font-size:20px;
+	display:inline-block;
+	position:relative;
+	left:360px;
+	bottom:682px;
+	font-weight:normal;
+ 	font-family: 'MontserratAlternates-Bold';
+	line-height:30px;
+	color:#000;
+	padding:97px 0 40px 0;
+}
+.content-rectangle a:link, .content-rectangle a:visited{
+	font-size:15px;
+	position:relative;
+	bottom:608px;
+	right:127px;
+ 	font-family: 'MontserratAlternates-Bold';
+	color:#000;
+	background-color:#fff;
+	text-transform:uppercase;
+	padding:5px 20px;
+	text-decoration:none;
+}
+.content-rectangle a:hover{
+	font-size:15px;
+ 	font-family: 'MontserratAlternates-Bold';
+	color:#fff;
+	background-color:#000;
+	text-transform:uppercase;
+	padding:5px 20px;
+	text-decoration:none;
+	transition:0.5s;
+}
+.stream{
+	width:100%;
+	height:auto;	
+	background:url(images/texture.png) no-repeat center top;
+	background-size:100%;
+}
+.stream_1{
+	width:100%;
+	height:989px;
+	background:url(images/v-arrow3.png) no-repeat top 502px right 70px;
+ 	background-color:rgba(0, 0, 0, 0.95);
+}
+.stream_1 h2{
+	font-size:55px;
+	font-weight:normal;
+	text-transform:uppercase;
+	font-family: 'alfa_slab_oneregular';
+	color:#fff;
+	padding:15px 0 0 70px;
+}
+.stream_1 h2 span a:link, .stream_1 h2 span a:visited{
+	width:auto;
+	height:auto;
+	color:#fff;
+	padding:10px 10px 0 10px;
+	background-color:red;
+	font-size:70px;
+	text-decoration:none;
+}
+.stream_1 h2 span a:hover{
+	width:auto;
+	height:auto;
+	padding:10px 10px 0 10px;
+	background-color:#f77176;
+	font-size:70px;
+	text-decoration:none;
+	transition:0.5s;
+}
+.stream_1 h3{
+	font-size:50px;
+	font-weight:normal;
+	text-transform:uppercase;
+  	font-family: 'Montserrat-Black';
+	color:#fff;
+	padding:100px 0 0 70px;
+}
+.stream_1 a img{
+	margin:0 0 0 400px;
+}
+.recent{
+	width:100%;
+	height:auto;	
+	background:url(images/texture.png) no-repeat center top;
+	background-size:100%;
+}
+.recent_1{
+	width:100%;
+	height:927px;
+	background:url(images/shape.png) no-repeat top 52px left, url(images/shape.png) no-repeat top 52px right, url(images/arrow1.png) no-repeat top 855px center;
+ 	background-color:rgba(0, 0, 0, 0.95);
+}
+.recent_1 h2{
+	font-size:55px;
+	font-weight:normal;
+	text-transform:uppercase;
+	font-family: 'alfa_slab_oneregular';
+	color:#fff;
+	text-align: center;
+	padding:83px 0 0 0;
+}
+.recent-content{
+	width:100%;
+	height:auto;
+	margin:92px 0 0 0;
+	display:flex;
+	justify-content:space-evenly;
+}
+.recent-box1{
+	width:324px;
+	height:536px;
+	background-color:#fff;
+}
+.square{
+	width:292px;
+	height:270px;	
+	background-color:#15f0fe;
+	margin:12px auto;
+}
+.square img{
+	margin:32px 0 0 0;
+}
+.recent h3{
+	font-size:27px;
+	font-weight:normal;
+	text-transform:uppercase;
+	font-family: 'alfa_slab_oneregular';
+	color:#2d2d2d;
+	text-align: center;
+	padding:17px 0 15px 0;
+}
+.recent p{
+	font-size:20px;
+	font-weight:normal;
+ 	font-family: 'MontserratAlternates-Bold';
+	line-height:30px;
+	color:#2d2d2d;
+	text-align:center;
+	padding:0 0 20px 0
+}
+.recent a:link, .recent a:visited{
+	font-size:15px;
+ 	font-family: 'MontserratAlternates-Bold';
+	color:#000;
+	background-color:#15f1ff;
+	text-transform:uppercase;
+	padding:10px;
+	text-decoration:none;
+	margin:0 95px;
+}
+.recent a:hover{
+	font-size:15px;
+ 	font-family: 'MontserratAlternates-Bold';
+	color:#000;
+	background-color:#0bcdd9;
+	text-transform:uppercase;
+	padding:10px;
+	text-decoration:none;
+	transition:0.5s;
+}
+.recent-box2{
+	width:324px;
+	height:536px;
+	background-color:#fff;
+}
+.square2{
+	width:292px;
+	height:270px;	
+	background-color:#15f0fe;
+	margin:12px auto;
+}
+.square2 img{
+	position:relative;
+	bottom:7px;
+}
+.recent-box3{
+	width:324px;
+	height:536px;
+	background-color:#fff;
+}
+.square3{
+	width:292px;
+	height:270px;	
+	background-color:#15f0fe;
+	margin:12px auto;
+}
+.square3 img{
+	margin:5px 0 0 53px;
+}
+.subscribe{
+	width:100%;
+	height:auto;	
+	background:url(images/texture.png) no-repeat center top;
+	background-size:100%;
+}
+.subscribe_1{
+	width:100%;
+	height:750px;
+	background-color:rgba(0, 0, 0, 0.95);
+}
+.subscribe_1 h2{
+	font-size:55px;
+	font-weight:normal;
+	text-transform:uppercase;
+	font-family: 'alfa_slab_oneregular';
+	color:#fff;
+	line-height:70px;
+	text-align:center;
+	margin:60px 0 0 0;
+}
+.subscribe_1 h2 span a:link, .subscribe_1 h2 span a:visited{
+	width:auto;
+	height:auto;
+	color:#fff;
+	padding:10px 10px 0 10px;
+	background-color:red;
+	font-size:70px;
+	text-decoration:none;
+}
+.subscribe_1 h2 span a:hover{
+	width:auto;
+	height:auto;
+	padding:10px 10px 0 10px;
+	background-color:#f77176;
+	font-size:70px;
+	text-decoration:none;
+	transition:0.5s;
+}
+.input{
+	width:940px;
+	height:auto;	
+	margin:75px auto;
+}
+.input input[type="name"]{
+	width:100%;
+	height:62px;	
+	background-color:#fff;
+	outline:none;
+	font-size:25px;
+	padding:0 0 0 20px;
+	margin:0 0 35px 0;
+}
+.input input[type="email"]{
+	width:100%;
+	height:62px;	
+	background-color:#fff;
+	outline:none;
+	font-size:25px;
+	padding:0 0 0 20px;
+	margin:0 0 35px 0;
+}
+.input input[type="message"]{
+	width:100%;
+	height:147px;	
+	background-color:#fff;
+	outline:none;
+	font-size:25px;
+	padding:0 0 85px 20px;
+}
+.subscribe_1 button {
+	text-align:center;
+	background-color:#000;
+}
+.subscribe_1 button a:link, .subscribe_1 button a:visited{
+	background-color:#15f1ff;
+	font-size:25px;
+ 	font-family: 'MontserratAlternates-Bold';
+	text-decoration:none;
+	color:#191919;
+	padding:5px 15px;
+	margin:0 0 0 785px;
+}
+.subscribe_1 button a:hover{
+	background-color:#0bcdd9;
+ 	font-family: 'MontserratAlternates-Bold';
+	font-size:25px;
+	text-decoration:none;
+	color:#191919;
+	padding:5px 15px;
+	transition:0.5s;
+}
+.footer{
+	width:100%;
+	height:654px;
+	background-color:#15f1ff;
+}
+.footer_1{
+	width:100%;
+	height:auto;
+	display:flex;
+	justify-content: space-evenly;
+	padding:174px 0 0 0;
+}
+.about{
+	width:auto;
+	height:auto;
+}
+.what{
+	width:auto;
+	height:auto;
+}
+.company{
+	width:auto;
+	height:auto;
+}
+.footer_1 h3{
+	font-size:35px;
+	font-weight:normal;
+	text-transform:uppercase;
+	font-family: 'alfa_slab_oneregular';
+	color:#000;
+}
+.footer_1 ul li{
+	list-style-type:none;
+	font-size:25px;
+	color:#000;
+	font-weight:bold;
+ 	font-family: 'MontserratAlternates-Bold';
+	padding:29px 0 0 0;
+}
+.footer_1 hr{
+	background-color:#fff;
+	border:1px solid #fff;
+	margin:-17px 0 0 -12px;
+	width:144px;
+}
+.what-hr hr{
+	width:275px
+}
+.company-hr hr{
+	width:290px;
+}
+.follow{
+	width:500px;
+	height:auto;
+	display:flex;
+   	align-items: center;
+	margin:0 0 0 1160px;
+}
+.follow h4{
+	font-size:25px;
+	color:#fff;
+ 	font-family: 'MontserratAlternates-Bold';
+	background-color:#ff3e3e;
+	padding:10px 20px;
+}
+.follow ul li{
+	list-style-type:none;
+	display:inline;
+	margin:0 20px 0 50px;
+}
+</style>
+</head>
+<body>
+<div class="main">
+	<div class="index">
+		<div class="header">
+			<div class="nav">
+				<img src="images/logo.png" alt="">
+				<div class="nav-bar">
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Services</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Sign in</a></li>
+					</ul>
+				</div>
+			</div>
+			<h1><span><a href="#">Live</a></span> Rugby<br>Streaming</h1>
+			<button><a href="#">Sign in</a></button>
+			<div class="dots"><img src="images/dots.png" alt=""></div>
+		</div>
+
+		<div class="saturday">
+			<h2>Don't miss the game</h2>
+			<h3>saturday<span>09</span>07:00 pm</h3>
+		</div>
+
+		<div class="group3">
+			<div class="group3_1">
+				<img src="images/group3-img.png" alt="">
+				<div class="right-content">
+					<h2>Lorem ipsum</h2>
+					<p>Lorem ipsum dolor sit amet,  teme consect<br>etur adipisicing elit, sed do eiusmod tmpo incididunt ut veniam lorem ipsumdolor sit amet,  teme consectetur adipisicing elit, se<br>d do eiusmod tempor incididunt veniam<br>tmpo incididunt ut veniam</p>
+					<a href="#">sign in</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="group4">
+			<div class="group4_1">
+				<div class="left-content">
+					<h2>Lorem ipsum</h2>
+					<p>Lorem ipsum dolor sit amet,  teme consect<br>etur adipisicing elit, sed do eiusmod tmpo incididunt ut veniam lorem ipsumdolor sit amet,  teme consectetur adipisicing elit, se<br>d do eiusmod tempor incididunt veniam<br>tmpo incididunt ut veniam</p>
+					<a href="#">sign in</a>
+				</div>
+			
+				<div class="right-rectangle">
+					<div class="image">
+						<img src="images/group4-img.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="group5">
+			<div class="group5_1">
+				<h2>Lorem ipsum</h2>
+				<p>Lorem ipsum dolor sit amet,  teme consectetur<br>adipisicing elit, sed do eiusmod tempor incididunt<br>ut veniam lorem ipsum dolor</p>
+				<div class="rectangle">
+					<div class="rectangle1">
+						<img src="images/group5-img1.png" alt="">
+					</div>
+					<div class="rectangle2">
+						<span><img src="images/group5-img2.png" alt=""></span>						
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="group6">
+			<div class="group6_1">
+				<h2>Lorem<br>ipsum amet</h2>
+				<div class="content-rectangle">
+					<img src="images/group6-img.png" alt="">
+					<p>Lorem ipsum dolor sit amet,  teme consectetur<br>adipisicing elit, sed do eiusmod tempor incidi<br>dunt ut veniam lorem ipsum dolor sit amet,te<br>me consectetur adipisicing elit, sed do eiusm<br>od tempor incididunt ut veniam.</p>
+					<a href="#">Sign in</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="stream">
+			<div class="stream_1">
+				<h3>the Stream</h3>
+				<h2>is <span><a href="#">Starting</a></span></h2>
+				<a href="#"><img src="images/stream-img.png" alt=""></a>
+			</div>
+		</div>
+
+		<div class="recent">
+			<div class="recent_1">
+				<h2>Recent post</h2>
+				<div class="recent-content">
+					<div class="recent-box1">
+						<div class="square">
+							<img src="images/recent-img1.png" alt="">
+						</div>
+						<h3>Lorem ipsum sit</h3>
+						<p>Lorem ipsum dolor sit amet<br>teme sit consectetur adipisi<br>cing elit, sed do os eiusmod<br>tempor incididunt ut .</p>
+						<a href="#">Read more</a>
+					</div>
+					<div class="recent-box2">
+						<div class="square2">
+							<img src="images/recent-img2.png" alt="">
+						</div>
+						<h3>Lorem ipsum sit</h3>
+						<p>Lorem ipsum dolor sit amet<br>teme sit consectetur adipisi<br>cing elit, sed do os eiusmod<br>tempor incididunt ut .</p>
+						<a href="#">Read more</a>
+					</div>
+					<div class="recent-box3">
+						<div class="square3">
+							<img src="images/recent-img3.png" alt="">
+						</div>
+						<h3>Lorem ipsum sit</h3>
+						<p>Lorem ipsum dolor sit amet<br>teme sit consectetur adipisi<br>cing elit, sed do os eiusmod<br>tempor incididunt ut .</p>
+						<a href="#">Read more</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="subscribe">
+			<div class="subscribe_1">
+				<h2><span><a href="#">subscribe</a></span> to<br>our news letter</h2>
+				<div class="input">
+					<input type="name" placeholder="Your Name" name="name">
+					<input type="email" placeholder="Your Email" name="mail">
+					<input type="message" placeholder="Message" name="message">
+				</div>
+				<button><a href="#">Send Message</a></button>
+			</div>
+		</div>
+
+		<div class="footer">
+			<div class="footer_1">
+				<div class="about">
+					<h3>About</h3>
+					<hr size="24">
+					<ul>
+						<li>History</li>
+						<li>Our Team</li>
+						<li>Mission Statement</li>
+						<li>Terms & Condition</li>
+						<li>Privacy Policy</li>
+					</ul>
+				</div>
+				<div class="what">
+						<h3>What we do</h3>
+						<div class="what-hr"><hr size="24"></div>
+					<ul>
+						<li>News and stories</li>
+						<li>Publications</li>
+						<li>Take action</li>
+						<li>Recomendations</li>
+						<li>Help</li>
+
+					</ul>
+				</div>
+				<div class="company">
+					<h3>Your Copany</h3>
+						<div class="company-hr"><hr size="24"></div>
+					<ul>
+						<li>Halimun Street 25</li>
+						<li>Jakarta, City 1234</li>
+						<li>www.yourflowersite.com</li>
+					</ul>
+				</div>
+			</div>
+				
+			<div class="follow">
+					<h4> Follow us!</h4>
+					<ul>
+						<li><a href="#"><img src="images/facebook.png" alt=""></a></li>
+						<li><a href="#"><img src="images/instagram.png" alt=""></a></li>
+						<li><a href="#"><img src="images/youtube.png" alt=""></a></li>
+					</ul>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
